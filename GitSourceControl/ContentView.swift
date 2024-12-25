@@ -18,6 +18,9 @@ struct ContentView: View {
                 .foregroundStyle(.quinary)
             Text("added in the second commit")
         }
+        Button("click me"){
+            print("")
+        }
         .padding()
         .padding()
     }
