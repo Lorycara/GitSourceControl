@@ -16,6 +16,7 @@ struct ContentView: View {
             Text("Hello, world!")
             Text("ciao")
                 .foregroundStyle(.quinary)
+            Text("added in the second commit")
         }
         .padding()
         .padding()
