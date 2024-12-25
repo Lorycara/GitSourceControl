@@ -50,6 +50,9 @@ struct ContentView: View {
         .padding()
         .padding()
         
+        RoundedRectangle(cornerRadius: 10)
+            .frame(width: 200, height: 100)
+        
         Circle()
             .frame(width: 100, height: 100)
             .offset( y: caca ? 100 : 0)
