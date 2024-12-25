@@ -28,6 +28,8 @@ import SwiftUI
 
 struct ContentView: View {
     @State var caca : Bool = false
+    @StateObject var vm = HomeViewModel()
+    
     var body: some View {
         VStack {
             Image(systemName: "globe")
@@ -50,6 +52,8 @@ struct ContentView: View {
         .padding()
         .padding()
         
+        Text("Ciao mamma")
+        
         RoundedRectangle(cornerRadius: 10)
             .frame(width: 200, height: 100)
         
@@ -61,7 +65,11 @@ struct ContentView: View {
             .onTapGesture {
                 makeCircleBounce()
             }
+            .onReceive(vm.timer) { _ in
+                makeCircleBounce()
+            }
     }
+    
 }
 
 #Preview {
