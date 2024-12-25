@@ -36,6 +36,9 @@ struct ContentView: View {
             Text("ciao")
                 .foregroundStyle(.quinary)
             Text("added in the second commit")
+                .background(
+                    Color.green.opacity(0.5)
+                )
         }
         Button("click me"){
             print("")
