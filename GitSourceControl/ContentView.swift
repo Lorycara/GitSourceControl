@@ -27,6 +27,7 @@
 import SwiftUI
 
 struct ContentView: View {
+    @State var caca : Bool = false
     var body: some View {
         VStack {
             Image(systemName: "globe")
@@ -43,8 +44,16 @@ struct ContentView: View {
         Button("click me"){
             print("")
         }
+        Button("caca"){
+            caca.toggle()
+        }
         .padding()
         .padding()
+        
+        Circle()
+            .frame(width: 100, height: 100)
+            .offset(x: caca ? 100 : 0, y: caca ? 100 : 0)
+            .animation(.bouncy(duration: 1), value: caca)
     }
 }
 
