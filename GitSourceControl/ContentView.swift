@@ -45,18 +45,28 @@ struct ContentView: View {
             print("")
         }
         Button("caca"){
-            caca.toggle()
+            makeCircleBounce()
         }
         .padding()
         .padding()
         
         Circle()
             .frame(width: 100, height: 100)
-            .offset(x: caca ? 100 : 0, y: caca ? 100 : 0)
+            .offset( y: caca ? 100 : 0)
             .animation(.bouncy(duration: 1), value: caca)
+            .padding()
+            .onTapGesture {
+                makeCircleBounce()
+            }
     }
 }
 
 #Preview {
     ContentView()
+}
+
+extension ContentView {
+    private func makeCircleBounce(){
+        caca.toggle()
+    }
 }
