@@ -31,19 +31,15 @@ struct ContentView: View {
     
     var body: some View {
         NavigationStack{
-            ScrollView(.horizontal, showsIndicators: false){
-                HStack{
-                    ForEach(0..<20){ _ in
-                        Image(systemName: "dog.fill")
-                            .resizable()
-                            .aspectRatio(1, contentMode: .fill)
-                            .frame(width: 40, height: 40)
-                    }
+            scrollDogs
+                .overlay{
+                    RoundedRectangle(cornerRadius: 10)
+                        .foregroundStyle(.red)
+                        .mask(scrollDogs)
                 }
-            }
-            .navigationTitle("A lot of dogsss")
-            .scrollBounceBehavior(.basedOnSize)
         }
+        .navigationTitle("A lot of dogsss")
+        .scrollBounceBehavior(.basedOnSize)
     }
 }
 
@@ -52,6 +48,17 @@ struct ContentView: View {
 }
 
 extension ContentView {
-    
+    private var scrollDogs: some View {
+        ScrollView(.horizontal, showsIndicators: false){
+            HStack{
+                ForEach(0..<20){ _ in
+                    Image(systemName: "dog.fill")
+                        .resizable()
+                        .aspectRatio(1, contentMode: .fill)
+                        .frame(width: 40, height: 40)
+                }
+            }
+        }
+    }
 }
 
