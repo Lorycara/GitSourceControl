@@ -11,6 +11,8 @@ struct ExploreView: View {
     var body: some View {
         Text("Exploree ")
             .padding()
+        
+        Image(systemName: "dog")
     }
 }
 
