@@ -12,6 +12,10 @@ class HomeViewModel: ObservableObject {
     @Published var text: String = ""
     @Published var timer = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
     init(){
-        
+        addSubscriber()
+    }
+    
+    private func addSubscriber(){
+        print("ciaio")
     }
 }
