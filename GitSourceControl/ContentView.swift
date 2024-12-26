@@ -27,51 +27,11 @@
 import SwiftUI
 
 struct ContentView: View {
-    @State var caca : Bool = false
-    @StateObject var vm = HomeViewModel()
+    
     
     var body: some View {
-        VStack {
-            Image(systemName: "heart.fill")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
-            Text("ciao")
-                .foregroundStyle(.quinary)
-            Text("added in the second commit")
-                .background(
-                    Color.green.opacity(0.5)
-                )
-        }
-        Button("click me"){
-            print("")
-        }
-        Button("caca"){
-            makeCircleBounce()
-        }
-        .padding()
-        .padding()
-        
-        Text("Ciao mama")
-        
-        RoundedRectangle(cornerRadius: 10)
-            .frame(width: 200, height: 100)
-        
-        Circle()
-            .frame(width: 100, height: 100)
-            .offset( y: caca ? 100 : 0)
-            .animation(.bouncy(duration: 1), value: caca)
-            .padding()
-            .onTapGesture {
-                makeCircleBounce()
-            }
-            .onReceive(vm.timer) { _ in
-                makeCircleBounce()
-            }
-        
-        Text("Home Analytics")
+        EmptyView()
     }
-    
 }
 
 #Preview {
@@ -79,7 +39,6 @@ struct ContentView: View {
 }
 
 extension ContentView {
-    private func makeCircleBounce(){
-        caca.toggle()
-    }
+    
 }
+
