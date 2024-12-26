@@ -14,6 +14,7 @@ struct ProfileView: View {
             .background(
                 Color.green
             )
+        Text("Profile analytics that never end. Unfortunately. Or fortunately? \nI'm loving the lord of the rings")
     }
 }
 
