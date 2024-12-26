@@ -68,6 +68,8 @@ struct ContentView: View {
             .onReceive(vm.timer) { _ in
                 makeCircleBounce()
             }
+        
+        Text("Home Analytics")
     }
     
 }
