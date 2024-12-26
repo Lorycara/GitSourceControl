@@ -15,6 +15,8 @@ struct ProfileView: View {
                 Color.green
             )
     }
+    
+    //fixed
 }
 
 #Preview {
