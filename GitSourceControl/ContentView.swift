@@ -32,7 +32,7 @@ struct ContentView: View {
     
     var body: some View {
         VStack {
-            Image(systemName: "bolt.fill")
+            Image(systemName: "heart.fill")
                 .imageScale(.large)
                 .foregroundStyle(.tint)
             Text("Hello, world!")
