@@ -52,7 +52,7 @@ struct ContentView: View {
         .padding()
         .padding()
         
-        Text("Ciao mamma")
+        Text("Ciao mama")
         
         RoundedRectangle(cornerRadius: 10)
             .frame(width: 200, height: 100)
