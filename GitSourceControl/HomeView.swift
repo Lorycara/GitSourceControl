@@ -14,5 +14,15 @@ public struct HomeView: View {
         Text("Home View")
             .padding()
             .foregroundStyle(.red)
+        
+        Image(systemName: "house.fill")
+            .resizable()
+            .aspectRatio(1.0, contentMode: .fit)
+            .foregroundStyle(.red)
+            .frame(width: 100, height: 100)
+            
     }
+}
+#Preview {
+    HomeView()
 }
