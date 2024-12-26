@@ -30,7 +30,20 @@ struct ContentView: View {
     
     
     var body: some View {
-        EmptyView()
+        NavigationStack{
+            ScrollView(.horizontal, showsIndicators: false){
+                HStack{
+                    ForEach(0..<20){ _ in
+                        Image(systemName: "dog.fill")
+                            .resizable()
+                            .aspectRatio(1, contentMode: .fill)
+                            .frame(width: 40, height: 40)
+                    }
+                }
+            }
+            .navigationTitle("A lot of dogsss")
+            .scrollBounceBehavior(.basedOnSize)
+        }
     }
 }
 
